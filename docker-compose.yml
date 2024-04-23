@@ -1,0 +1,19 @@
+version: "3.8"
+
+services:
+  backend:
+    build: ./backend
+    volumes:
+      - ./backend:/usr/src/app
+    expose:
+      - 5000
+
+  frontend:
+    stdin_open: true
+    build: ./frontend
+    volumes:
+      - ./frontend:/usr/src/app
+    expose:
+      - 3000
+    depends_on:
+      - backend

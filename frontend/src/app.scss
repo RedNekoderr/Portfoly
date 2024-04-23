@@ -1,0 +1,180 @@
+:root {
+  --base: #eff1f5;
+  --surface: #e6e9ef;
+  --overlay: #e1e5ec;
+  --muted: #6c6f85;
+  --subtle: #5c5f77;
+  --text: #4c4f69;
+  --red: #d20f39;
+  --gold: #df8e1d;
+  --rose: #dd7878;
+  --pine: #179299;
+  --foam: #7287fd;
+  --iris: #8839ef;
+  --highlight-low: #ccd0da;
+  --highlight-mid: #bcc0cc;
+  --highlight-high: #acb0be;
+  --panel: #ccd0da90;
+}
+@font-face {
+  font-family: 'coolveticaregular';
+  src: url('/fonts/coolvetica_rg-webfont.woff2') format('woff2'),
+       url('/fonts/coolvetica_rg-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+    font-family: 'Ubuntu';
+    src: url('/fonts/Ubuntu-Medium.woff2') format('woff2'),
+        url('/fonts/Ubuntu-Medium.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+* {
+  font-family: 'Ubuntu', arial;
+}
+
+body {
+  background: var(--base);
+  color: var(--text);
+  margin: 0 auto;
+}
+
+ul {
+  list-style-type: none;
+}
+
+table {
+  border-collapse: collapse;
+}
+
+table, th, td {
+  border: 1px solid var(--muted);
+}
+
+::selection {
+  background: var(--foam);
+  color: var(--base);
+}
+
+
+.markdown-body {
+  border-radius: 20px;
+  padding: 2em;
+  background: var(--surface);
+  color: var(--text);
+}
+
+.markdown-body pre, .markdown-body th, .markdown-body td{
+  background: var(--highlight-low);
+}
+
+.markdown-body h1 {
+  border-bottom: 3px solid var(--muted);
+}
+
+.markdown-body h2 {
+  border-bottom: 2px solid var(--muted);
+}
+
+.markdown-body blockquote {
+  border-left: 3px solid var(--muted);
+  color: var(--subtle);
+}
+
+.neo-hl {
+  border-radius: 50px;
+  background: var(--highlight-low);
+  box-shadow: 20px 20px 60px #adb1b9,
+              -20px -20px 60px #ebeffb;
+}
+
+.neo-ov {
+  border-radius: 50px;
+  background: var(--overlay);
+  box-shadow: 20px 20px 60px #bfc3c9ee,
+              -20px -20px 60px #ffffffee;
+}
+
+.neo-sf {
+  background-color: var(--surface) !important;
+  box-shadow: 20px 20px 60px #d8d9dc,
+              -20px -20px 60px #ffffff;
+}
+
+
+.text {
+  color: var(--text);
+  font-family: 'Ubuntu', arial;
+  font-size: 1.5em;
+  text-decoration: none;
+  border: none;
+  outline: none;
+}
+
+.title {
+  font-size: 4em;
+  font-family: 'coolveticaregular', arial;
+}
+
+.coolvetica {
+  font-family: 'coolveticaregular', arial;
+}
+
+.title-unfree {
+  font-size: 3em;
+  font-family: 'coolveticaregular', arial;
+}
+
+.subtle {
+  color: var(--subtle);
+  font-size: 1.1em;
+}
+
+.button {
+  padding: 0 .2em;
+  text-decoration: none;
+  transition: background .5s ease,
+              border-color .5s ease;
+  border: 3px solid transparent;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.button:hover {
+  background: var(--highlight-mid);
+}
+
+.button:active {
+  background: var(--highlight-high);
+  border-color: var(--text);
+  outline: none;
+}
+
+.rounded {
+  border-radius: 20px !important;
+}
+
+.base {
+  background: var(--base);
+}
+
+.base-forced {
+  background-color: var(--base) !important;
+  background: var(--base) !important;
+}
+
+.selected {
+  background-color: var(--highlight-high) !important;
+}
+
+.rose {
+  background-color: var(--rose);
+}
+
+dot {
+  background: var(--rose) !important;
+}
